@@ -50,3 +50,6 @@ Se você tiver alguma dúvida ou quiser entrar em contato, pode me encontrar em:
 ## Autor
 
 Rebeca Souza - 2024
+
+![127 0 0 1_5500_index html (1)](https://github.com/user-attachments/assets/88d521f8-43f3-43d0-8280-39a30a3b7807)
+
