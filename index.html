@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header, .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .footer {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1>Atividades Target Sistemas</h1>
+</div>
+
+<!-- Questão 1: Soma -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Questão 1</h4>
+                    <h5 class="card-subtitle">Cálculo de Soma</h5>
+                    <p class="card-text text-justify">
+                        Observe o trecho de código abaixo:<br/> 
+                        <code>int INDICE = 13, SOMA = 0, K = 0; Enquanto K &lt; INDICE faça { K = K + 1; SOMA = SOMA + K; } Imprimir(SOMA);</code><br/>
+                        Ao final do processamento, qual será o valor da variável SOMA?
+                    </p>
+                    <p>O resultado é <strong>91</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Questão 2: Fibonacci -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Questão 2</h4>
+                    <h5 class="card-subtitle">Verificar número na sequência de Fibonacci</h5>
+                    <p class="card-text text-justify">
+                        Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores,
+                        escreva um programa que verifique se um número informado pertence à sequência.
+                    </p>
+                    <input class="form-control" type="number" id="numeroFibonacci" placeholder="Digite um número">
+                    <button class="btn btn-primary" onclick="verificarFibonacci()">Verificar</button>
+                    <button class="btn btn-warning text-light" onclick="limparCampoFibonacci()">Limpar</button>
+                    <p id="resultado_fibonacci"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Questão 3: Cálculo de faturamento diário -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Questão 3</h4>
+                    <h5 class="card-subtitle">Cálculo de faturamento diário</h5>
+                    <p class="card-text text-justify">
+                        Para calcular o faturamento diário, utilize os dados abaixo:
+                    </p>
+                    <pre id="faturamentoDados" style="display:none;">
+                    {
+                        "faturamento": [
+                            10000.00, 5000.00, 20000.00, 0.00, 8000.00, 
+                            12000.00, 30000.00, 0.00, 7000.00, 5000.00
+                        ]
+                    }
+                    </pre>
+                    <button class="btn btn-primary" onclick="analisarFaturamento()">Calcular</button>
+                    <button class="btn btn-warning text-light" onclick="limparCampoFaturamento()">Limpar</button>
+                    <p id="resultado_faturamento"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Questão 4: Percentual de faturamento por estado -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Questão 4</h4>
+                    <h5 class="card-subtitle">Cálculo do percentual de faturamento por estado</h5>
+                    <p class="card-text text-justify">
+                        Dado o faturamento mensal da distribuidora por estado, calcule o percentual de representação:
+                    </p>
+                    <pre id="faturamentoMensal" style="display:none;">
+                    {
+                        "SP": 67836.43,
+                        "RJ": 36678.66,
+                        "MG": 29229.88,
+                        "ES": 27165.48,
+                        "Outros": 19849.53
+                    }
+                    </pre>
+                    <button class="btn btn-primary" onclick="calcularPercentuais()">Calcular Percentuais</button>
+                    <button class="btn btn-warning text-light" onclick="limparCampoPercentuais()">Limpar</button>
+                    <p id="resultado_percentuais"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Questão 5: Inverter string -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Questão 5</h4>
+                    <h5 class="card-subtitle">Inverter string</h5>
+                    <p class="card-text">
+                        Escreva um programa que inverta os caracteres de um string.
+                    </p>
+                    <input class="form-control" type="text" id="stringParaInverter" placeholder="Digite a string aqui"><br/>
+                    <button class="btn btn-primary" onclick="inverterString()">Inverter</button>
+                    <button class="btn btn-warning text-light" onclick="limparCampoStringInverter()">Limpar</button>
+                    <p id="resultado_inversao"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p class="text-center">Rebeca Souza - 2024</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+// Função para contar letras 'a'
+function contarLetrasA() {
+    const texto = document.getElementById('texto').value;
+    const contagem = (texto.match(/a/gi) || []).length;
+    document.getElementById('resultado_string').textContent = `A letra 'a' aparece ${contagem} vezes.`;
+}
+
+// Função para verificar se o número pertence à sequência de Fibonacci
+function verificarFibonacci() {
+    const numero = parseInt(document.getElementById('numeroFibonacci').value);
+    let fibonacci = [0, 1];
+
+    // Gera a sequência de Fibonacci até o número informado
+    while (true) {
+        const proximo = fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2];
+        if (proximo > numero) break;
+        fibonacci.push(proximo);
+    }
+
+    const pertence = fibonacci.includes(numero);
+    const resultado = pertence 
+        ? `O número ${numero} pertence à sequência de Fibonacci.` 
+        : `O número ${numero} não pertence à sequência de Fibonacci.`;
+
+    document.getElementById('resultado_fibonacci').textContent = resultado;
+}
+
+// Função para analisar faturamento diário
+function analisarFaturamento() {
+    const dados = JSON.parse(document.getElementById('faturamentoDados').textContent);
+    const faturamento_diario = dados.faturamento;
+
+    const faturamento_validos = faturamento_diario.filter(f => f > 0);
+    const menor_valor = Math.min(...faturamento_validos);
+    const maior_valor = Math.max(...faturamento_validos);
+    const media_anual = faturamento_validos.reduce((a, b) => a + b, 0) / faturamento_validos.length;
+    const dias_acima_da_media = faturamento_diario.filter(f => f > media_anual).length;
+
+    const resultado = `
+        Menor faturamento: R$ ${menor_valor.toFixed(2)}<br>
+        Maior faturamento: R$ ${maior_valor.toFixed(2)}<br>
+        Dias acima da média: ${dias_acima_da_media}
+    `;
+
+    document.getElementById('resultado_faturamento').innerHTML = resultado;
+}
+
+// Função para calcular percentuais de faturamento por estado
+function calcularPercentuais() {
+    const dados = JSON.parse(document.getElementById('faturamentoMensal').textContent);
+    const totalFaturamento = Object.values(dados).reduce((a, b) => a + b, 0);
+
+    const percentuais = Object.entries(dados).map(([estado, valor]) => {
+        const percentual = (valor / totalFaturamento) * 100;
+        return `${estado}: ${percentual.toFixed(2)}%`;
+    });
+
+    document.getElementById('resultado_percentuais').innerHTML = percentuais.join('<br>');
+}
+
+// Função para inverter string
+function inverterString() {
+    const str = document.getElementById('stringParaInverter').value;
+    let inversao = '';
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        inversao += str[i];
+    }
+
+    document.getElementById('resultado_inversao').textContent = inversao;
+}
+
+// Funções para limpar campos
+function limparCampoFibonacci() {
+    document.getElementById('numeroFibonacci').value = '';
+    document.getElementById('resultado_fibonacci').textContent = '';
+}
+
+function limparCampoFaturamento() {
+    document.getElementById('resultado_faturamento').innerHTML = '';
+}
+
+function limparCampoPercentuais() {
+    document.getElementById('resultado_percentuais').innerHTML = '';
+}
+
+function limparCampoStringInverter() {
+    document.getElementById('stringParaInverter').value = '';
+    document.getElementById('resultado_inversao').textContent = '';
+}
+</script>
+
+</body>
+</html>

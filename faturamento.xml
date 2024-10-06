@@ -1,0 +1,30 @@
+<faturamento>
+    <dia>
+        <numero>1</numero>
+        <valor>5000</valor>
+    </dia>
+    <dia>
+        <numero>2</numero>
+        <valor>7000</valor>
+    </dia>
+    <dia>
+        <numero>3</numero>
+        <valor>6000</valor>
+    </dia>
+    <dia>
+        <numero>4</numero>
+        <valor>0</valor>
+    </dia>
+    <dia>
+        <numero>5</numero>
+        <valor>8000</valor>
+    </dia>
+    <dia>
+        <numero>6</numero>
+        <valor>0</valor>
+    </dia>
+    <dia>
+        <numero>7</numero>
+        <valor>10000</valor>
+    </dia>
+</faturamento>
